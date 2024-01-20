@@ -1,0 +1,38 @@
+# Clase base
+class Animal:
+    def __init__(self, nombre):
+        self._nombre = nombre  # Atributo encapsulado
+
+    def hablar(self):  # Método a ser sobrescrito
+        pass
+
+# Clase derivada
+class Perro(Animal):
+    def __init__(self, nombre, raza):
+        super().__init__(nombre)  # Herencia
+        self.raza = raza
+
+    def hablar(self):  # Sobrescribiendo el método hablar
+        return "¡Guau!"
+
+# Clase derivada
+class Gato(Animal):
+    def __init__(self, nombre, color):
+        super().__init__(nombre)  # Herencia
+        self.color = color
+
+    def hablar(self):  # Sobrescribiendo el método hablar
+        return "¡Miau!"
+
+# Creando instancias
+perro = Perro("Firulais", "Labrador")
+gato = Gato("Pelusa", "Blanco")
+
+# Utilizando métodos para demostrar funcionalidad
+print(perro.hablar())  # Salida: ¡Guau!
+print(gato.hablar())  # Salida: ¡Miau!
+
+#Este programa utiliza herencia al tener una clase base Animal y dos clases derivadas Perro y Gato. 
+# La encapsulación se aplica al atributo __nombre. 
+# El polimorfismo se demuestra mediante la sobrescritura del método hacer_sonido en las clases derivadas 
+# y el uso de una lista de animales con diferentes instancias. 
